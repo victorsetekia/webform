@@ -45,7 +45,7 @@
                 }
             }
 
-    async function LoadDropDown(ddl, promise_data){ //function to load a drop down
+    (async function LoadDropDown(ddl, promise_data){ //function to load a drop down
                 var arrdata = await promise_data;  //resolve promise
                 var data = Object.values(arrdata); //get values data
                 var cbo = document.querySelector(ddl);
@@ -53,7 +53,7 @@
                 data.slice(1).forEach(row => { //skip header row 0
                     cbo.add(new Option(row[1], row[5]));
                 });
-            })
+            })();
     
   </script>
 </html>
